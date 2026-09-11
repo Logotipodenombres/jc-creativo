@@ -1,4 +1,4 @@
-const CACHE='jc-creativo-v4';
+const CACHE='jc-creativo-v5';
 const BASE=new URL('./',self.location.href);
 const ASSETS=['./','./index.html','./icon.svg','./icon-192.png','./icon-512.png','./manifest.webmanifest'];
 self.addEventListener('install',event=>{event.waitUntil(caches.open(CACHE).then(cache=>cache.addAll(ASSETS.map(path=>new URL(path,BASE).href))).then(()=>self.skipWaiting()));});
